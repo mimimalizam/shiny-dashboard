@@ -79,8 +79,8 @@ as it is stated in `config/rserver.conf`.
 Getting started with dashing
 ----------------------------
 
-When you have running a Docker container, and you have opened `http://localhost:9923`,
-you can create a dashboard. For example, by following [shinydashboard tutorial].
+When you have a running Docker container, and you have opened `http://localhost:9923`,
+you can start creating a [dashboard] 🎉 .
 
 Trivia
 ------
@@ -110,4 +110,4 @@ Dashboard is an app that
 [executable prime]: http://primes.utm.edu/glossary/page.php?sort=ExecutablePrime
 [Illegal numbers]: http://fatphil.org/maths/illegal.html
 [Numberphile's video]: https://www.youtube.com/watch?v=wo19Y4tw0l8
-[shinydashboard tutorial]: https://rstudio.github.io/shinydashboard/get_started.html
+[dashboard]: https://rstudio.github.io/shinydashboard/get_started.html
