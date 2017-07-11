@@ -6,13 +6,13 @@ This repo is intended to let me play around with Shiny
 Dataset
 ---------
 
-Run in Docker
--------------
+Run RStudio in Docker
+---------------------
 
 From the comfort of your terminal run
 
 ```
-docker build -t shiny-dashboards .
+$ docker build -t shiny-dashboards .
 ```
 
 An instance of an **image** is called **container**.
@@ -21,7 +21,7 @@ If you run this image, you will have an instance of it, which we call containter
 You can have many running containers of the same image.
 
 ```
-docker run --rm -p 9923:9923 mimimum/shiny-dashboards
+$ docker run --rm -p 9923:9923 mimimum/shiny-dashboards
 ```
 
 It will be avaliable at `http://localhost:9923`.
@@ -37,6 +37,36 @@ Log in credentials are:
 ```
  username: rstudio
  password: rstudio
+```
+
+Dockerfile
+----------
+
+The image is built by running `docker build -t my-r-image .` in the same
+directory as our Dockerfile. It helps us to re-create our images at will.
+Here are some main commands
+
+- `FROM` - can be found at the beginning of every Dockerfile and specifies
+the image we want to start from
+- `RUN` - runs shell commands on top of our base image. Can be used for downloads
+and installations
+- `ADD` - adds files from our computer (host) to a Docker images which it is describing.
+
+Manipulating with files between host and container
+-------------------------------------------------
+
+If we have a running container and we want to add some files to it,
+we'd use a command similar to the following
+
+```
+$ docker cp $HOME/shiny-dash-1/sample-app <containter-id>:home/rstudio/sample-app
+```
+
+Similarly, with the following command we can copy files from running container
+
+```
+# copy from contrainer
+$ docker cp <container_id>:/file/path/within/container /host/path/target
 ```
 
 RStudio Server
