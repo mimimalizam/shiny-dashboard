@@ -76,6 +76,12 @@ By default RStudio accepts connections on port 8787.
 In this case Docker will be using port 9923,
 as it is stated in `config/rserver.conf`.
 
+Getting started with dashing
+----------------------------
+
+When you have running a Docker container, and you have opened `http://localhost:9923`,
+you can create a dashboard. For example, by following [shinydashboard tutorial].
+
 Trivia
 ------
 ***9923*** = 38 * 256 + 195 is the smallest [executable prime] on an x86 DOS.
@@ -104,3 +110,4 @@ Dashboard is an app that
 [executable prime]: http://primes.utm.edu/glossary/page.php?sort=ExecutablePrime
 [Illegal numbers]: http://fatphil.org/maths/illegal.html
 [Numberphile's video]: https://www.youtube.com/watch?v=wo19Y4tw0l8
+[shinydashboard tutorial]: https://rstudio.github.io/shinydashboard/get_started.html
